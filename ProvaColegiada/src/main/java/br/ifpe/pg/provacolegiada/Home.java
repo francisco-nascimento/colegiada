@@ -11,4 +11,5 @@ public class Home {
 	public String exibirHome() {
 		return "home";
 	}
+	
 }
