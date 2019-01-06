@@ -2,7 +2,6 @@ package br.ifpe.pg.provacolegiada.cadastro;
 
 import java.util.List;
 
-import org.hibernate.criterion.Example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
