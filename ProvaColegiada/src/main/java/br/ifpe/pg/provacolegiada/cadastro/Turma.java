@@ -13,32 +13,20 @@ public class Turma {
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private String sigla;
 	@ManyToOne
 	private Curso curso;
 	@Enumerated(EnumType.STRING)
 	private Turno turno;
+	private int ano;
+	private int entrada;	
 	public Turma() {
 		super();
-	}
-	public Turma(Integer id, String sigla, Curso curso, Turno turno) {
-		super();
-		this.id = id;
-		this.sigla = sigla;
-		this.curso = curso;
-		this.turno = turno;
 	}
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public String getSigla() {
-		return sigla;
-	}
-	public void setSigla(String sigla) {
-		this.sigla = sigla;
 	}
 	public Curso getCurso() {
 		return curso;
@@ -51,6 +39,18 @@ public class Turma {
 	}
 	public void setTurno(Turno turno) {
 		this.turno = turno;
+	}
+	public int getAno() {
+		return ano;
+	}
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+	public int getEntrada() {
+		return entrada;
+	}
+	public void setEntrada(int entrada) {
+		this.entrada = entrada;
 	}
 	
 	

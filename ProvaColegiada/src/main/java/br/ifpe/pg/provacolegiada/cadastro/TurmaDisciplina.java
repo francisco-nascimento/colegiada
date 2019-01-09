@@ -17,20 +17,16 @@ public class TurmaDisciplina {
 	private Disciplina disciplina;
 	@ManyToOne
 	private Professor professor;
-	private int ano;
-	private int entrada;
 	
 	public TurmaDisciplina() {
 		super();
 	}
-	public TurmaDisciplina(Integer id, Turma turma, Disciplina disciplina, Professor professor, int ano, int entrada) {
+	public TurmaDisciplina(Integer id, Turma turma, Disciplina disciplina, Professor professor) {
 		super();
 		this.id = id;
 		this.turma = turma;
 		this.disciplina = disciplina;
 		this.professor = professor;
-		this.ano = ano;
-		this.entrada = entrada;
 	}
 	public Integer getId() {
 		return id;
@@ -56,18 +52,5 @@ public class TurmaDisciplina {
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
 	}
-	public int getAno() {
-		return ano;
-	}
-	public void setAno(int ano) {
-		this.ano = ano;
-	}
-	public int getEntrada() {
-		return entrada;
-	}
-	public void setEntrada(int entrada) {
-		this.entrada = entrada;
-	}
-	
 
 }

@@ -64,7 +64,11 @@ public class DisciplinaController {
 	@GetMapping("edit/{id}")
 	public ModelAndView exibirEdicao(@PathVariable("id") Integer id) {
 		Disciplina disciplina = disciplinaService.buscarPorId(id);
-		return pesquisar(disciplina);
+		ModelAndView mv = new ModelAndView("cadastros/disciplinas-list");
+		mv.addObject("lista", disciplinaService.listarTodas());	
+		mv.addObject("listaCursos", cursoService.listarTodos());
+		mv.addObject("disciplina", disciplina);
+		return mv;
 	}
 
 	@GetMapping("/remover/{id}")
